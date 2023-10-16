@@ -29,18 +29,24 @@ for perm in perms:
     if all(result[i, j] == 0 for i, j in indices_to_check):
         results_with_zeros_below_diag.append(result)
         #print(result)
+        #print(P)
+        #print(P_T)
    
     indices_to_check = [(2, 0), (2, 1), (3,0), (3, 1), (4, 0), (4, 1)]
-    print(f"Case 3: {indices_to_check}")
+    print(f"Case 2: {indices_to_check}")
     if all(result[i, j] == 0 for i, j in indices_to_check):
         results_with_zeros_below_diag.append(result)
         #print(result)
+        #print(P)
+        #print(P_T)
     
     indices_to_check = [(3, 0), (3, 1), (3,2), (4, 0), (4, 1), (4, 2)]
     print(f"Case 3: {indices_to_check}")
     if all(result[i, j] == 0 for i, j in indices_to_check):
         results_with_zeros_below_diag.append(result)
         #print(result)
+        #print(P)
+        #print(P_T)
     
   
     
@@ -49,6 +55,8 @@ for perm in perms:
     if all(result[i, j] == 0 for i, j in indices_to_check):
         results_with_zeros_below_diag.append(result)
         #print(result)
+        #print(P)
+        #print(P_T)
 
     # Print the result for the current permutation
     #print(f"Result for permutation {perm}:")
