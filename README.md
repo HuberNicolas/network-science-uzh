@@ -1,59 +1,117 @@
-# network-science
+<div align="center">
 
-> Assignments and analyses from the Network Science master's course at the University of Zurich, covering graph algorithms, network metrics, and community detection.
+# Network Science
 
-## ✨ TL;DR
-```bash
-jupyter notebook assignment-1/Assignment_01.ipynb
-```
+**Coursework for Network Science at the University of Zurich, Fall 2023**
 
-## 🚀 Features
-- **4 assignments:** Practical analysis of real-world networks with Python and NetworkX.
-- **Jupyter notebooks:** Reproducible analyses with visualizations.
-- **Core theory:** Small-world networks, scale-free graphs, and centrality measures.
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)
+![NetworkX](https://img.shields.io/badge/NetworkX-3.2-2C5BB4)
+![uv](https://img.shields.io/badge/uv-DE5FE9?logo=uv&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## 🎓 Academic Context
-This project was created as part of a university course.
-- **Course:** Network Science (L+E)
-- **Institution:** University of Zurich (UZH)
-- **Semester:** Fall Semester 2023
+[Contents](#contents) · [Getting started](#getting-started) · [Data](#data) · [Release as submitted](https://github.com/HuberNicolas/network-science-uzh/releases/tag/v1.0.0)
 
----
+</div>
 
-## 🛠️ Installation
+Four graded assignments from the Network Science course, solved in Jupyter notebooks with NetworkX: degree
+correlations and centralities, random graph models, community detection, power laws, maximum-entropy null models
+(ERGMs), correlation networks of stocks, robustness, and epidemic spreading on networks.
 
-### Prerequisites
-- Python 3.x
-- Jupyter Notebook / JupyterLab
-- NetworkX, Matplotlib, NumPy, Pandas
+> [!NOTE]
+> This is unofficial study material. The notebooks and reports are shown as we submitted them in 2023: they are not
+> corrected, and the repository is not developed further. The assignment sheets and other course material are not
+> included. The library versions are pinned to December 2023.
 
-### Steps
+> [!WARNING]
+> Most notebooks delete and recreate their `output/` folder when you run them, and some computations (randomised
+> networks, ERGM sampling, SIR simulations) run for a long time. Work on a copy if you want to keep the original plots.
+
+## Contents
+
+| Assignment | Topics | Notebook | Report |
+|---|---|---|---|
+| [1](assignment-1/) | Permutation matrices and irreducibility; average nearest-neighbour degree and assortativity of real and randomised networks; degree, closeness, betweenness and eigenvector centrality and their correlations | [Assignment_01.ipynb](assignment-1/Assignment_01.ipynb), [reducible.py](assignment-1/reducible.py), [lattice_n_k_generator.py](assignment-1/lattice_n_k_generator.py) | [Network_Science_Assignment_1.pdf](assignment-1/Network_Science_Assignment_1.pdf) (hand-in), [Assignment_01_Results.pdf](assignment-1/Assignment_01_Results.pdf) |
+| [2](assignment-2/) | Erdős–Rényi model, Watts–Strogatz model, community detection on real and randomised networks, power-law fits of degree distributions | [Assignment_02.ipynb](assignment-2/Assignment_02.ipynb) | [Assignment_02_Results.pdf](assignment-2/Assignment_02_Results.pdf) |
+| [3](assignment-3/) | T1: strength assortativity of the World Trade Web and enhanced configuration models (CReMa, NEMtropy); T2: minimum spanning trees of NYSE stock correlations; T3: robustness of synthetic and real networks under random failures and attacks | [t1](assignment-3/t1/Assignment_03.ipynb), [t2](assignment-3/t2/Assignment_03.ipynb), [t3](assignment-3/t3/Assignment_03.ipynb) | [Assignment_03_Results_1-3.pdf](assignment-3/Assignment_03_Results_1-3.pdf) |
+| [4](assignment-4/) | Compartmental models (SIR) on networks; spreading ability of nodes versus their centrality | [Assignment_04.ipynb](assignment-4/Assignment_04.ipynb), [Assignment_04_T1_1_2.ipynb](assignment-4/Assignment_04_T1_1_2.ipynb), [task_1.3separated.ipynb](assignment-4/task_1.3separated.ipynb), [task_1.4separated.ipynb](assignment-4/task_1.4separated.ipynb) | [Assignment_4_Results_merged.pdf](assignment-4/Assignment_4_Results_merged.pdf) |
+
+Each assignment folder holds its data (`assignment_0X_data/` or `datasets/`) and the generated plots (`output/`).
+Assignment 3 keeps one shared data folder for its three tasks.
+
+## Getting started
+
+You need [uv](https://docs.astral.sh/uv/). It installs Python 3.10 and the pinned libraries from `uv.lock`.
+
 1. Clone the repository:
-```bash
-git clone https://github.com/HuberNicolas/network-science
-cd network-science
-```
-2. Install dependencies:
-```bash
-pip install networkx matplotlib numpy pandas jupyter
-```
 
----
+   ```bash
+   git clone https://github.com/HuberNicolas/network-science-uzh.git
+   ```
 
-## 💻 Usage
+   ```bash
+   cd network-science-uzh
+   ```
 
-```bash
-jupyter notebook
-```
+2. Install the environment:
 
-Open the notebooks in the respective `assignment-*` directories.
+   ```bash
+   uv sync
+   ```
 
----
+3. Start Jupyter and open a notebook from the table above. Run it from its own folder, because the notebooks use
+   relative paths:
 
-## 📄 License
+   ```bash
+   uv run jupyter notebook
+   ```
 
-This project is licensed under the **GNU General Public License v3 (GPLv3)** – see the [LICENSE](LICENSE) file for details.
+### Tech stack
 
-**Conditions:**
-- The original copyright notice (crediting my name) must be retained in all copies or substantial portions of the software.
-- Modifications and derivative works *must* also be released under the GPLv3, and the source code must be made publicly available.
+| Area | Libraries |
+|---|---|
+| Graphs | ![NetworkX](https://img.shields.io/badge/NetworkX-3.2-2C5BB4) ![NEMtropy](https://img.shields.io/badge/NEMtropy-2.1-555555) ![powerlaw](https://img.shields.io/badge/powerlaw-1.5-555555) |
+| Numerics | ![NumPy](https://img.shields.io/badge/NumPy-1.26-013243?logo=numpy&logoColor=white) ![SciPy](https://img.shields.io/badge/SciPy-1.11-8CAAE6?logo=scipy&logoColor=white) ![pandas](https://img.shields.io/badge/pandas-2.1-150458?logo=pandas&logoColor=white) ![Numba](https://img.shields.io/badge/Numba-0.58-00A3E0?logo=numba&logoColor=white) |
+| Plots and notebooks | ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8-11557C) ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white) |
+
+`pyproject.toml` resolves all libraries as of 23 December 2023 (`exclude-newer`). NEMtropy imports Numba without
+declaring it, so Numba is listed explicitly.
+
+## Data
+
+The course provided the datasets on OLAT, the UZH learning platform. The graph files contain anonymised integer node
+labels and no metadata, and the course material did not document their original sources or licenses.
+
+| Data | Used in | Notes |
+|---|---|---|
+| `graph_AstroPh`, `graph_CondMat`, `graph_celegansInteractomes`, `graph_chess`, `graph_eu_airlines`, `graph_facebook`, `graph_game_thrones`, `graph_internet`, `graph_jazz_collab` (GML) | Assignment 1 | The jazz network is from Gleiser and Danon (2003) |
+| `graph_Korea`, `graph_eu_airlines`, `graph_hep-th`, `graph_internet`, `graph_macaque`, `graph_madrid`, `graph_starwars` (GML) | Assignment 2 | |
+| World Trade Web 1992–2002 (GraphML and edge lists), NYSE correlation matrices (NumPy), `graph_eu_airlines`, `graph_power` | Assignment 3 | |
+| `graph1.1`, `graph1.2`, `graph_jazz_collab`, `graph_madrid` (GML) | Assignment 4 | |
+
+The data files are here so that the notebooks run as they are. They are not covered by the MIT license of this
+repository. If you own one of these datasets and want it removed, please open an issue.
+
+## Known issues
+
+- The notebooks were written with Python 3.8 (assignment 4), 3.10 and 3.11 (assignments 1–3). The shared environment
+  uses Python 3.10: Python 3.11 no longer accepts a set in `random.sample`, which `task_1.3separated.ipynb` relies on.
+- Answers may be wrong or incomplete in places. They are left as submitted.
+
+## Authors
+
+- Nicolas Huber ([@HuberNicolas](https://github.com/HuberNicolas))
+- Raphael Wäspi ([@sumsumcity](https://github.com/sumsumcity))
+
+We worked on all parts of the assignments together.
+
+## Acknowledgements
+
+The course Network Science (Fall 2023) was taught by the Blockchain & Distributed Ledger Technologies Group of the
+UZH Blockchain Center, Faculty of Business, Economics and Informatics, University of Zurich. The assignment tasks and
+datasets come from the course.
+
+## License
+
+The code and notebooks are licensed under the [MIT License](LICENSE). The datasets and the assignment texts quoted in
+the notebooks belong to their respective owners.
