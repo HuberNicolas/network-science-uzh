@@ -1,3 +1,5 @@
 .DS_Store
 .idea
-*.zip
+*.zip.venv/
+.ipynb_checkpoints/
+__pycache__/
