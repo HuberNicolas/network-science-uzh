@@ -21,8 +21,9 @@ Open tasks before the repository is made public. See also [Known issues](README.
 ## 3. Documentation
 
 - [x] Rewrite the README (contents per assignment, data, known issues, authors)
-- [ ] Add the name of the lecturer to the README
-- [ ] Add original sources and licenses of the datasets, if they can be found
+- [x] Add the lecturer and instructors to the README (from the HS23 syllabus)
+- [x] Name the likely origins of six datasets by node and edge counts
+- [ ] Licenses of the datasets are still unknown (not documented by the course)
 
 ## 4. Before publishing
 

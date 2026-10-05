@@ -89,6 +89,18 @@ labels and no metadata, and the course material did not document their original 
 | World Trade Web 1992–2002 (GraphML and edge lists), NYSE correlation matrices (NumPy), `graph_eu_airlines`, `graph_power` | Assignment 3 | |
 | `graph1.1`, `graph1.2`, `graph_jazz_collab`, `graph_madrid` (GML) | Assignment 4 | |
 
+Some files match well-known public networks in their number of nodes and edges. These are likely origins, not
+confirmed by the course:
+
+| File | Nodes | Edges | Likely origin |
+|---|---|---|---|
+| `graph_facebook` | 4,039 | 88,234 | SNAP [ego-Facebook](https://snap.stanford.edu/data/ego-Facebook.html), McAuley and Leskovec (2012) |
+| `graph_AstroPh` | 17,903 | 196,972 | Largest component of SNAP [ca-AstroPh](https://snap.stanford.edu/data/ca-AstroPh.html), Leskovec et al. (2007); SNAP lists 197,031 edges for it |
+| `graph_jazz_collab` | 198 | 2,742 | Jazz musicians network, Gleiser and Danon (2003) |
+| `graph_game_thrones` | 107 | 352 | Character network of *A Storm of Swords*, Beveridge and Shan (2016) |
+| `graph_power` | 4,941 | 6,594 | Western US power grid, Watts and Strogatz (1998) |
+| `graph_madrid` | 64 | 243 | Network of the 2004 Madrid train bombing suspects, Hayes (2006) |
+
 The data files are here so that the notebooks run as they are. They are not covered by the MIT license of this
 repository. If you own one of these datasets and want it removed, please open an issue.
 
@@ -107,9 +119,10 @@ We worked on all parts of the assignments together.
 
 ## Acknowledgements
 
-The course Network Science (Fall 2023) was taught by the Blockchain & Distributed Ledger Technologies Group of the
-UZH Blockchain Center, Faculty of Business, Economics and Informatics, University of Zurich. The assignment tasks and
-datasets come from the course.
+The course Network Science (03SM22MI0019, Fall 2023, 6 ECTS) was led by Prof. Dr. Claudio J. Tessone, Blockchain &
+Distributed Ledger Technologies Group, Department of Informatics, University of Zurich (UZH Blockchain Center). The
+instructors were Dr. Nicolò Vallarano, Dr. Jian-Hong Lin, Yu Gao, Yu Zhang and Benjamin Kraner. The assignment tasks
+and datasets come from the course.
 
 ## License
 
