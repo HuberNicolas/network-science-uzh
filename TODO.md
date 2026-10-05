@@ -16,7 +16,8 @@ Open tasks before the repository is made public. See also [Known issues](README.
 
 - [x] Add `pyproject.toml` and `uv.lock` with Python 3.10 and the library versions of December 2023
 - [x] Declare `numba`, which NEMtropy needs but does not declare
-- [ ] Run the long notebooks (assignments 1–3) once in a copy to confirm they still finish
+- [x] Run notebooks in a copy: assignment 3 T3 finishes; T2 fails on an undefined `tickers` (left as submitted, see Known issues)
+- [ ] Run assignments 1, 2 and 3 T1 and the assignment 4 notebooks to the end (each runs for a long time)
 
 ## 3. Documentation
 

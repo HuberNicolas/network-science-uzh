@@ -108,6 +108,11 @@ repository. If you own one of these datasets and want it removed, please open an
 
 - The notebooks were written with Python 3.8 (assignment 4), 3.10 and 3.11 (assignments 1–3). The shared environment
   uses Python 3.10: Python 3.11 no longer accepts a set in `random.sample`, which `task_1.3separated.ipynb` relies on.
+- `assignment-3/t2/Assignment_03.ipynb` stops at the degree distributions of the Gaussian and one-factor models with
+  `NameError: name 'tickers' is not defined`. The cell that defined `tickers` was removed before submission; the
+  stored outputs come from the original session.
+- The last cell of each notebook exports it to PDF with `jupyter nbconvert --to pdf`. This needs a LaTeX
+  installation and fails without one; the rest of the notebook is not affected.
 - Answers may be wrong or incomplete in places. They are left as submitted.
 
 ## Authors
