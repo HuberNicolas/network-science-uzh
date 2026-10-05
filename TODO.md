@@ -34,4 +34,4 @@ Open tasks before the repository is made public. See also [Known issues](README.
 - [ ] Rewrite the old commit e-mail addresses with a mailmap (dates and content stay the same)
 - [x] Push `main` and the tag `v1.0.0`, create the release "As submitted"
 - [x] Tag the cleaned-up state as `v1.1.0` and create its release
-- [ ] Check for secrets in the files and the git history, right before publishing
+- [x] Check for secrets in the files and the git history (5 October 2026: nothing found)
