@@ -111,8 +111,9 @@ repository. If you own one of these datasets and want it removed, please open an
 - `assignment-3/t2/Assignment_03.ipynb` stops at the degree distributions of the Gaussian and one-factor models with
   `NameError: name 'tickers' is not defined`. The cell that defined `tickers` was removed before submission; the
   stored outputs come from the original session.
-- The last cell of each notebook exports it to PDF with `jupyter nbconvert --to pdf`. This needs a LaTeX
-  installation and fails without one; the rest of the notebook is not affected.
+- The last cell of `assignment-1/Assignment_01.ipynb` and `assignment-3/t3/Assignment_03.ipynb` exports the notebook
+  to PDF with `jupyter nbconvert --to pdf`. This needs a LaTeX installation and fails without one; the rest of the
+  notebook is not affected.
 - Answers may be wrong or incomplete in places. They are left as submitted.
 
 ## Authors
